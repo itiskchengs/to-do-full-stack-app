@@ -1,19 +1,19 @@
-import { useState } from 'react'
-
-const Form = () => {
-
-    const [text, setText] = useState('')
-
-    function onSubmit(event) {
-        event.preventDefault();
-        console.log(text);
-    }
-
+const Form = (props) => {
+    const {todo, handleInput, handleSubmit} = props;
+    
     return(
         <form>
-            <input type="text" value={text} onChange={(event) => setText(event.target.value)}></input>
-            <button onClick={onSubmit}>Add</button>
-        </form>
+        <input
+          type="text"
+          value={todo.title}
+          onChange={ (event) => handleInput(event.target.value)}
+        />
+        <input
+          type="submit"
+          value="Click"
+          onClick={handleSubmit}
+        />
+      </form>
     )
 }
 

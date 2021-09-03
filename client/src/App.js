@@ -1,11 +1,11 @@
 import Header from "./component/header/Header";
-import ToDoForm from './component/form/Form';
+import TodoApp from './component/todoapp/ToDoApp';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <ToDoForm />
+      <TodoApp />
     </div>
   );
 }
